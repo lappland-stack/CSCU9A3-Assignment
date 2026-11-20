@@ -5,7 +5,8 @@ public class GraphExperiment {
         investigate("Graph B", GraphData.graphB(), "Entrance", "Workshop", true);
 
         // Replace this with your student ID number specified in the assessment instructions.
-        long seed = 12345L;
+        //shit i guess i will
+        long seed = 3546619L; //i aint taking no L tho
         SiteGraph generated = GraphData.generatedGraph(seed);
         investigate("Generated graph (seed " + seed + ")", generated, "L0", "L17", true);
     }

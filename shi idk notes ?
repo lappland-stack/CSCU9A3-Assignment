@@ -1,0 +1,79 @@
+oh yeah i remember now, im gonna use this to breakdown each java code file, so less get to work
+oh yeah im also gonna make a shitty lil overleaf template
+theeeeeeeeeen idk, thats it really, we gonna try to do task 1 tmrw or smth, a task a day should give me what 6 days to get this done out of 16 or so, so we have a margin of error of 10 whole days, we got this fr fr
+
+BaselineTest.java -
+
+the private class stores all the reults from all variables to do with events, and theres like 5 tests, and i think i gotta add uno mas, i forgor ill find out when i actually start the tasks probably, but there is 1 test which is tied to the debugging task, i got a game theory about it in the code comments.
+
+But all in all this file is just the tests, onto the next
+
+EventData.java -
+
+holds a list of all existing events and creates a tree and also shuffles the events order, and is also where task 5 is held, thats a basic enough explanation
+
+EventTree.java - 
+
+Part of task 2 takes place in here (2c and a specifically). Its also sort of explained for me, but i will focus on this later on when i actually do the tasks.
+Also holds a binary search tree, the way its ordered is shown in the actual code comments.
+I will write here how the comments say it searches tho
+It searches like insertion and returns the matching event, if there is one, and also returns the number of tree nodes examined during the search, so in simple terms it returns a results if there is one and how many positions it went trough before it reached the result, and it doesnt work yet as i need to actually change the code so it no longer displays 0
+
+FestivalEcent.java - 
+
+This is where task 1 is at and where this torment finally begins. Its apparently the common view for anything scheduled in the whole programme.
+
+FestivalSorter.java - 
+
+Holds more components of task 5, and actually has a TODO section which is where im pretty sure i have to actually do the task itself
+
+GraphData.java -
+
+Holds the seed section of task 4 (i think it was task 4) and the lists with the info for task 4, pretty much what will be used to draw our map, but no visual components, data only.
+
+GraphExperiment.java - 
+
+Here we hold the variable for the graph experiment, its in the name ngl.
+
+
+GraphVisualiser.java -
+
+As the name implies, this actually holds the graphs that will be displayed to me. 
+
+Performance.java - 
+
+Holds the variables for the performances
+
+ScheduleChecker.java -
+
+This is where the buggy is at, its also what decides on event clashes.
+
+SearchResult.java - 
+
+Holds the search results to be displayed
+
+SiteGraph.java - 
+
+so this holds the functionality for task for AND IS WHERE THE MAP ACTUALLY SITS AT, THE PREVIOUS SECTIONS ARE JUST DATA OR THE TWO GRAPHS NEEDED FOR THE FUCKING TASK
+
+StudentTests.java - 
+
+this where the tests will be, the one made by me.
+
+
+TreeExperiment.java -
+
+holds the experiments for the trees
+
+
+Yeah my explanations got shorter cuz i got more tiered of all this, but hey its done, lets make the overleaf report bit.
+
+
+
+
+
+
+
+
+
+

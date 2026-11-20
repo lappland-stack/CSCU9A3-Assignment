@@ -1,8 +1,18 @@
+/*
+there deffo has to be a way to simplify all the imports, like import only once in a method and then call that
+method to import into every other file
+first we import the local data and time functionality
+then we import the array functionality and then the list functionality
+
+now im thinking i could just say all utility classes at the top and just not repeat myself each time
+ */
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 /** Binary search tree ordered by event start time, then title. */
+//explained it for me?
+    //seems like it, guess i wont comment all the rest and ill quickfire the rest of the files
 public class EventTree {
     private static class Node {
         FestivalEvent event;

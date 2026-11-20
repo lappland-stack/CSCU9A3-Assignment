@@ -1,3 +1,4 @@
+//imports all requiered utilities
 import java.util.List;
 
 public record SearchResult(List<String> route, List<String> visitedOrder) {
