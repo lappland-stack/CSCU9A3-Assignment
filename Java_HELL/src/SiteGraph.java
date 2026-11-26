@@ -37,19 +37,24 @@ public class SiteGraph {
         frontier.add(start);
         discovered.add(start);
 
+        int maxFrontier = 1;
+
         while (!frontier.isEmpty()) {
             String current = frontier.remove();
             visitedOrder.add(current);
-            if (current.equals(goal)) return result(start, goal, parent, visitedOrder);
+
+            if (current.equals(goal))
+                return result(start, goal, parent, visitedOrder, maxFrontier);
 
             for (String neighbour : adjacency.get(current)) {
                 if (discovered.add(neighbour)) {
                     parent.put(neighbour, current);
                     frontier.add(neighbour);
+                    maxFrontier = Math.max(maxFrontier, frontier.size());
                 }
             }
         }
-        return new SearchResult(List.of(), List.copyOf(visitedOrder));
+        return new SearchResult(List.of(), List.copyOf(visitedOrder), maxFrontier);
     }
 
     /** Working iterative DFS supplied for Task 4. */
@@ -63,10 +68,14 @@ public class SiteGraph {
         frontier.push(start);
         discovered.add(start);
 
+        int maxFrontier = 1;
+
         while (!frontier.isEmpty()) {
             String current = frontier.pop();
             visitedOrder.add(current);
-            if (current.equals(goal)) return result(start, goal, parent, visitedOrder);
+
+            if (current.equals(goal))
+                return result(start, goal, parent, visitedOrder, maxFrontier);
 
             // Reverse so the first-added neighbour is explored first in this stack implementation.
             List<String> neighbours = new ArrayList<>(adjacency.get(current));
@@ -75,23 +84,24 @@ public class SiteGraph {
                 if (discovered.add(neighbour)) {
                     parent.put(neighbour, current);
                     frontier.push(neighbour);
+                    maxFrontier = Math.max(maxFrontier, frontier.size());
                 }
             }
         }
-        return new SearchResult(List.of(), List.copyOf(visitedOrder));
+        return new SearchResult(List.of(), List.copyOf(visitedOrder), maxFrontier);
     }
 
     private SearchResult result(String start, String goal, Map<String, String> parent,
-                                List<String> visitedOrder) {
+                                List<String> visitedOrder, int maxFrontier) {
         LinkedList<String> route = new LinkedList<>();
         String current = goal;
         route.addFirst(current);
         while (!current.equals(start)) {
             current = parent.get(current);
-            if (current == null) return new SearchResult(List.of(), List.copyOf(visitedOrder));
+            if (current == null) return new SearchResult(List.of(), List.copyOf(visitedOrder), maxFrontier);
             route.addFirst(current);
         }
-        return new SearchResult(List.copyOf(route), List.copyOf(visitedOrder));
+        return new SearchResult(List.copyOf(route), List.copyOf(visitedOrder), maxFrontier);
     }
 
     private void requireLocations(String start, String goal) {

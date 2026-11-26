@@ -1,7 +1,7 @@
 //imports all requiered utilities
 import java.util.List;
 
-public record SearchResult(List<String> route, List<String> visitedOrder) {
+public record SearchResult(List<String> route, List<String> visitedOrder, int maxFrontier) {
     public boolean found() {
         return !route.isEmpty();
     }

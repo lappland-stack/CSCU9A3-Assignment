@@ -31,6 +31,6 @@ public class GraphExperiment {
 
     private static void print(String algorithm, SearchResult result) {
         System.out.printf("%-4s route=%s, edges=%d, vertices visited=%d%n",
-                algorithm, result.route(), result.routeLengthInEdges(), result.verticesVisited());
+                algorithm, result.route(), result.routeLengthInEdges(), result.verticesVisited(), result.maxFrontier());
     }
 }
