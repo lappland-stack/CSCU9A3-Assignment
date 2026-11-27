@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
  * be able to work with FestivalEvent values.
  */
 //oh so this is where task 1 is, fair eough, and its explained for me too
-    //no nothing is explained its just some reminders for task 1, but what is here is quite self explanatory
+//no nothing is explained its just some reminders for task 1, but what is here is quite self explanatory
+
 public interface FestivalEvent {
     String getId();
     String getTitle();
